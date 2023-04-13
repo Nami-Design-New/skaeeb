@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --mainColor: #154371;
   --mainColor10: #e8f2fb;
@@ -913,7 +914,15 @@ header nav .navBtn.active span:last-child {
 }
 
 .projects {
-  padding: 80px 0;
+  padding: 60px 0;
+}
+.projects .seeMore {
+  font-weight: bold;
+  color: var(--secondColor);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-transform: capitalize;
 }
 .projects .business {
   display: flex;
@@ -987,6 +996,11 @@ header nav .navBtn.active span:last-child {
   text-align: center;
   transition: 0.6s ease-in-out;
 }
+@media (max-width: 768px) {
+  .projects .business .name h5 {
+    font-size: 16px;
+  }
+}
 .projects .business .name .animatedLink {
   margin-top: auto;
 }
@@ -1004,4 +1018,43 @@ header nav .navBtn.active span:last-child {
 }
 .projects .business:hover .name h5 {
   color: var(--whiteColor);
+}
+
+.banner {
+  background: linear-gradient(rgba(103, 14, 54, 0.9411764706), rgba(103, 14, 54, 0.9725490196)), url(../img/banner.svg);
+  background-size: contain;
+  background-repeat: repeat-x;
+  padding: 200px 0 50px;
+  position: relative;
+  display: flex;
+  background-attachment: fixed;
+}
+@media (max-width: 768px) {
+  .banner {
+    padding: 150px 0 30px;
+  }
+}
+.banner .links a {
+  padding: 4px;
+  position: relative;
+  color: var(--whiteColor);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: capitalize;
+}
+.banner .links a:last-child::after {
+  display: none;
+}
+.banner .links a::after {
+  content: " ↣ ";
+}
+.banner .links a.active {
+  cursor: default;
+  color: var(--lightGrayColor);
+}
+.banner h1 {
+  font-weight: bold;
+  color: var(--whiteColor);
+  text-transform: capitalize;
 }/*# sourceMappingURL=style.css.map */
