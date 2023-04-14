@@ -997,10 +997,8 @@ header {
     }
   }
 }
-
 .banner {
-  background: linear-gradient( #670e36f0, #670e36f8),
-    url(../img/banner.svg);
+  background: linear-gradient(#670e36f0, #670e36f8), url(../img/banner.svg);
   background-size: contain;
   background-repeat: repeat-x;
   // background-attachment: fixed;
@@ -1011,7 +1009,6 @@ header {
   @media (max-width: 768px) {
     padding: 150px 0 30px;
   }
-
   .links {
     a {
       padding: 4px;
@@ -1039,5 +1036,129 @@ header {
     font-weight: bold;
     color: var(--whiteColor);
     text-transform: capitalize;
+  }
+}
+
+.aboutPage {
+  padding: 48px 0;
+
+  .row {
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+  .info {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 16px;
+    @media (max-width: 768px) {
+      padding: 48px 16px;
+    }
+    .des {
+      color: var(--darkColor);
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      li {
+        padding: 4px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        &::before {
+          content: "\f336";
+          font-family: "Font Awesome 6 Pro";
+          color: var(--secondColor);
+        }
+      }
+    }
+  }
+  .lazyImg {
+    position: relative;
+    height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      border: 10px solid gold;
+      width: 100%;
+      height: 90%;
+      transform: translateY(-50%);
+    }
+    .lazyDiv {
+      // width: min(100% - 40px);
+      height: 100%;
+      margin: auto;
+      .simpleParallax {
+        height: 100%;
+      }
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        height: 85%;
+      }
+    }
+  }
+  .socialMedia {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--mainColor);
+      color: var(--mainColor);
+      border-radius: 100px;
+      transition: var(--transition);
+      box-shadow: 0px 4px var(--mainColor30);
+      &:hover{
+        background-color: var(--mainColor);
+        color: var(--whiteColor);
+        transform: translateY(4px);
+        box-shadow: 0px 0px var(--mainColor30);
+
+      }
+    }
+  }
+  .statistic {
+    padding: 24px 0;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-end;
+    .counterUp {
+      font-weight: bold;
+      font-size: 100px;
+      background: #e6644510;
+      background-size: contain;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -webkit-text-stroke: 1px #e66445;
+      font-family: "Manrope Alt", Sans-serif;
+      @media (max-width: 768px) {
+        font-size: 70px;
+      }
+    }
+    h6 {
+      font-weight: bold;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      max-height: 100px;
+      text-align: center;
+    }
   }
 }
