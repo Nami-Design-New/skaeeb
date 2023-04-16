@@ -53,7 +53,7 @@
 
 a {
   text-decoration: none;
-  transition: var(--transition) !important;
+  transition: var(--transition);
 }
 
 a:hover {
@@ -1182,4 +1182,53 @@ header nav .navBtn.active span:last-child {
   writing-mode: vertical-rl;
   max-height: 100px;
   text-align: center;
+}
+
+.missionVision {
+  padding: 100px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.168627451), rgba(0, 0, 0, 0.3176470588)), url(../img/about2.jpg);
+  background-attachment: fixed;
+  margin-top: 80px;
+}
+.missionVision .mission,
+.missionVision .vision {
+  background-color: rgba(108, 108, 108, 0.1882352941);
+  padding: 32px 24px;
+  height: 100%;
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  border-radius: 16px;
+}
+.missionVision .mission .sectionTitle,
+.missionVision .vision .sectionTitle {
+  color: var(--whiteColor);
+}
+.missionVision .mission ul,
+.missionVision .vision ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 48px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.missionVision .mission ul li,
+.missionVision .vision ul li {
+  padding: 4px;
+  position: relative;
+  display: flex;
+  gap: 8px;
+  color: var(--lightGrayColor);
+}
+.missionVision .mission ul li::before,
+.missionVision .vision ul li::before {
+  content: "\f648";
+  font-family: "Font Awesome 6 Pro";
+  color: gold;
+  margin-top: 2px;
+  font-weight: 100;
+}
+.missionVision .vision ul li::before {
+  content: "\e027";
 }/*# sourceMappingURL=style.css.map */
