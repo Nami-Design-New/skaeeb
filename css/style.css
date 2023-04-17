@@ -1746,6 +1746,7 @@ header nav .navBtn.active span:last-child {
   min-height: 500px;
   background-image: linear-gradient(rgba(103, 14, 54, 0.5647058824), rgba(103, 14, 54, 0.4274509804)), url(../img/about2.jpg);
   background-attachment: fixed;
+  gap: 24px;
 }
 .contactSection h1 {
   color: var(--whiteColor);
