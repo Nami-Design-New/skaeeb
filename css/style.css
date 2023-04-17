@@ -1715,7 +1715,7 @@ header nav .navBtn.active span:last-child {
 }
 
 .partners {
-  padding: 100px 0 60px;
+  padding: 100px 0;
 }
 .partners .swiper-slide {
   width: auto;
@@ -1751,4 +1751,47 @@ header nav .navBtn.active span:last-child {
 .contactSection h1 {
   color: var(--whiteColor);
   font-weight: bold;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  background-color: var(--mainColor);
+}
+footer .container {
+  color: var(--whiteColor);
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container .logo {
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+footer .container .socialMedia {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+footer .container .socialMedia a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--whiteColor);
+  border-radius: 100px;
+  transition: var(--transition);
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.3176470588);
+}
+footer .container .socialMedia a:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  transform: translateY(4px);
+  box-shadow: none;
+}
+footer .container .company {
+  color: var(--secondColor10);
 }/*# sourceMappingURL=style.css.map */
