@@ -1764,6 +1764,12 @@ footer .container {
   gap: 24px;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 400px) {
+  footer .container {
+    justify-content: center;
+  }
 }
 footer .container .logo {
   height: 40px;
