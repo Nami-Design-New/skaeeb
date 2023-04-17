@@ -1684,7 +1684,7 @@ header {
 
 .partners {
   padding: 100px 0 60px;
- 
+
   .swiper-slide {
     width: auto;
   }
@@ -1694,7 +1694,6 @@ header {
     margin: auto;
   }
 
-  
   .referenceLogo {
     height: 100px;
     padding: 16px;
@@ -1704,5 +1703,22 @@ header {
       width: 100%;
       object-fit: contain;
     }
+  }
+}
+
+.contactSection {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+  min-height: 500px;
+  background-image: linear-gradient(#670e3690, #670e366d), url(../img/about2.jpg);
+  background-attachment: fixed;
+  h1{
+    color: var(--whiteColor);
+    font-weight: bold;
   }
 }
