@@ -321,6 +321,12 @@ button {
   padding: 8px 16px !important;
 }
 
+content {
+  display: flex;
+  min-height: 87.6vh;
+  flex-direction: column;
+}
+
 .lazyDiv {
   position: relative;
   overflow: hidden;
@@ -1301,6 +1307,122 @@ header nav .navBtn.active span:last-child {
   .projectsPage .gallery .inner {
     gap: 4px;
   }
+}
+.projectsPage .swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.projectsPage .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.projectsPage .mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+.projectsPage .mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.projectsPage .mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+.projectsPage .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.projectsPage .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.projectsPage .swiperControl {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 20px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.projectsPage .swiperControl .swiperBtns {
+  display: flex;
+  gap: 8px;
+}
+.projectsPage .swiperControl .swiperBtns .swiper-button-next,
+.projectsPage .swiperControl .swiperBtns .swiper-button-prev {
+  position: relative;
+  left: unset;
+  right: unset;
+  top: unset;
+  bottom: unset;
+  margin: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--whiteColor);
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--whiteColor);
+  border-radius: 100%;
+  transition: var(--transition);
+  opacity: 0.8;
+}
+.projectsPage .swiperControl .swiperBtns .swiper-button-next::after,
+.projectsPage .swiperControl .swiperBtns .swiper-button-prev::after {
+  font-size: 32px;
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 200;
+}
+@media (max-width: 768px) {
+  .projectsPage .swiperControl .swiperBtns .swiper-button-next::after,
+  .projectsPage .swiperControl .swiperBtns .swiper-button-prev::after {
+    font-size: 24px;
+  }
+}
+.projectsPage .swiperControl .swiperBtns .swiper-button-next:hover,
+.projectsPage .swiperControl .swiperBtns .swiper-button-prev:hover {
+  opacity: 1;
+  background-color: white;
+  color: var(--secondColor);
+}
+.projectsPage .swiperControl .swiperBtns .swiper-button-next {
+  left: unset;
+}
+.projectsPage .swiperControl .swiperBtns .swiper-button-next::after {
+  content: "\f105" !important;
+}
+.projectsPage .swiperControl .swiperBtns .swiper-button-prev::after {
+  content: "\f105" !important;
+  transform: scaleX(-1);
+}
+.projectsPage .swiperControl .swiper-pagination {
+  position: relative;
+  left: unset;
+  right: unset;
+  top: unset;
+  bottom: unset;
+  margin: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectsPage .swiperControl .swiper-pagination .swiper-pagination-bullet {
+  background-color: white;
+  transition: var(--transition);
+  border-radius: 16px;
+}
+.projectsPage .swiperControl .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
 }
 
 .equipments {

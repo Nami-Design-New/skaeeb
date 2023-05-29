@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="img/fav.svg" />
+  <!-- title -->
+  <title> LETTER </title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap");
+
+    :root {
+      --mainColor: #610038;
+      --secondColor: #004a74;
+    }
+
+    * {
+      font-family: "IBM Plex Sans Arabic", sans-serif;
+      margin: 0;
+      padding: 0;
+      outline: none;
+      direction: ltr;
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 6px;
+      border-radius: 0px !important;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 0px !important;
+      background: #d8d8d8;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #b5b5b5;
+      outline: none;
+      border-radius: 20px !important;
+    }
+
+    :target {
+      scroll-margin-top: 50px;
+    }
+
+    a {
+      text-decoration: none;
+      transition: var(--transition) !important;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: var(--mainColor);
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    body {
+      width: 210mm;
+      height: 297mm;
+      margin: auto;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      gap: 16px;
+      padding-right: 34px;
+    }
+
+    .container .frame {
+      border-right: 10px solid #d3dad8;
+      padding-right: 4px;
+      height: 297mm;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 24px;
+    }
+
+    .container .frame::before {
+      content: "";
+      height: 80%;
+      width: 100%;
+      background-color: var(--mainColor);
+      display: flex;
+    }
+
+    .container .frame::after {
+      content: "";
+      height: 20%;
+      width: 100%;
+      background-color: var(--secondColor);
+      display: flex;
+    }
+
+    .container content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 24px 0;
+      flex: 1;
+    }
+
+    .container header {
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .container header h5 {
+      text-transform: uppercase;
+      margin-bottom: auto;
+    }
+
+    .container header div {
+      flex: 1;
+    }
+
+    .container header p {
+      text-transform: capitalize;
+    }
+
+    .container header p span {
+      text-transform: none;
+    }
+
+    .container header .adress {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container header .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container header .logo img {
+      width: 150px;
+      max-height: 200px;
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+
+    /*# sourceMappingURL=style.css.map */
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="frame"></div>
+    <content>
+      <header>
+        <div class="adress">
+          <h5> adress details </h5>
+          <p> short adress : <span> EKJA2B98 </span> </p>
+          <p> Buliding No : <span> 2898 Street.Bashar Bin Bard </span> </p>
+          <p> Secondry No : <span> 7317.District.Al Olaya Dist.</span> </p>
+          <p> postal code: <span> 34447 </span> </p>
+          <p> city : <span> Al Khobar,Kingdom Of Saudi Arabia </span> </p>
+        </div>
+        <div class="logo">
+          <img src="img/logo.svg" />
+        </div>
+        <div class="adress">
+          <h5> Contact us </h5>
+          <p> phone : <span> 0138124936 </span> </p>
+          <p> Email : <span> AFZ@SKEEB.COM </span> </p>
+          <p> website : <span> WWW.SKEEB.COM </span> </p>
+          <p> location : <span> Saudi Arabia.Al Khobar </span> </p>
+
+
+        </div>
+      </header>
+      <!-- write here -->
+      <section>
+       
+
+        
+      </section>
+      <div></div>
+    </content>
+  </div>
+</body>
+
+</html>

@@ -299,6 +299,12 @@ button {
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
+content {
+  display: flex;
+  min-height: calc(87.6vh);
+  flex-direction: column;
+}
+
 .lazyDiv {
   position: relative;
   overflow: hidden;
@@ -1273,6 +1279,124 @@ header {
       }
     }
   }
+  .swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mySwiper2 {
+    height: 80%;
+    width: 100%;
+  }
+
+  .mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .swiperControl {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 20px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    .swiperBtns {
+      display: flex;
+      gap: 8px;
+      .swiper-button-next,
+      .swiper-button-prev {
+        position: relative;
+        left: unset;
+        right: unset;
+        top: unset;
+        bottom: unset;
+        margin: unset;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--whiteColor);
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--whiteColor);
+        border-radius: 100%;
+        transition: var(--transition);
+        opacity: 0.8;
+        &::after {
+          font-size: 32px;
+          font-family: "Font Awesome 6 Pro";
+          font-weight: 200;
+          @media (max-width: 768px) {
+            font-size: 24px;
+          }
+        }
+        &:hover {
+          opacity: 1;
+          background-color: white;
+          color: var(--secondColor);
+        }
+      }
+      .swiper-button-next {
+        left: unset;
+        &::after {
+          content: "\f105" !important;
+        }
+      }
+      .swiper-button-prev {
+        &::after {
+          content: "\f105" !important;
+          transform: scaleX(-1);
+        }
+      }
+    }
+    .swiper-pagination {
+      position: relative;
+      left: unset;
+      right: unset;
+      top: unset;
+      bottom: unset;
+      margin: unset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .swiper-pagination-bullet {
+        background-color: white;
+        transition: var(--transition);
+        border-radius: 16px;
+        &.swiper-pagination-bullet-active {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
 }
 .equipments {
   padding: 48px 0;
@@ -1736,7 +1860,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    @media (max-width:400px) {
+    @media (max-width: 400px) {
       justify-content: center;
     }
     .logo {
@@ -1767,7 +1891,7 @@ footer {
         }
       }
     }
-    .company{
+    .company {
       color: var(--secondColor10);
     }
   }
