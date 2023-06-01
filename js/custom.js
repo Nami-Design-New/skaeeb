@@ -45,26 +45,45 @@ $(document).ready(function () {
     },
   });
 
-
-  var swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".projectSlider", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
   });
-  var swiper2 = new Swiper(".mySwiper2", {
+  var swiper2 = new Swiper(".projectSlider2", {
     loop: true,
     spaceBetween: 10,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".projectSliderNext",
+      prevEl: ".projectSliderPrev",
     },
     thumbs: {
       swiper: swiper,
     },
   });
-  
+
+  //ourInvestorsSlider
+  var ourInvestorsSlider = new Swiper(".ourInvestorsSlider", {
+    spaceBetween: 12,
+    speed: 1000,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      // dragSize: 70,
+      draggable: true,
+      hide: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 3,
+      },
+     
+    },
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

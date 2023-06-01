@@ -301,7 +301,7 @@ button {
 /////////////////////////////////////////////////////////////////////////////////////////
 content {
   display: flex;
-  min-height: calc(87.6vh);
+  min-height: calc(100vh - 80px);
   flex-direction: column;
 }
 
@@ -1291,24 +1291,24 @@ header {
     background-position: center;
   }
 
-  .mySwiper2 {
+  .projectSlider2 {
     height: 80%;
     width: 100%;
   }
 
-  .mySwiper {
+  .projectSlider {
     height: 20%;
     box-sizing: border-box;
     padding: 10px 0;
   }
 
-  .mySwiper .swiper-slide {
+  .projectSlider .swiper-slide {
     width: 25%;
     height: 100%;
     opacity: 0.4;
   }
 
-  .mySwiper .swiper-slide-thumb-active {
+  .projectSlider .swiper-slide-thumb-active {
     opacity: 1;
   }
 
@@ -1808,7 +1808,10 @@ header {
 
 .partners {
   padding: 100px 0;
-
+  background-color: var(--mainColor10);
+  .title .hint::after {
+    background: var(--mainColor10);
+  }
   .swiper-slide {
     width: auto;
   }
@@ -1850,7 +1853,7 @@ header {
 }
 
 footer {
-  margin-top: 50px;
+  // margin-top: 50px;
   padding: 20px 0;
   background-color: var(--mainColor);
   .container {
@@ -1893,6 +1896,100 @@ footer {
     }
     .company {
       color: var(--secondColor10);
+    }
+  }
+}
+
+.clients {
+  padding: 100px 0;
+  // background-color: var(--secondColor10);
+  .top {
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .hint {
+      color: var(--textColor);
+      width: min(100% - 40px, 600px);
+    }
+  }
+  .sideImg{
+    width: 100%;
+    height: 100%;
+    padding: 0 32px;
+    .simpleParallax{
+      height: 100%;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .client {
+    padding: 24px;
+    position: relative;
+    border: 1px solid var(--mainColor30);
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      @media (max-width: 768px) {
+        height: 110px;
+      }
+    }
+    span {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(#154371ce, #154371);
+      position: absolute;
+      right: 0;
+      bottom: -100%;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--whiteColor);
+      transition: 0.3s ease-in-out;
+      .name {
+        transform: translateY(50px);
+        transition: 0.6s ease-in-out;
+        padding: 24px;
+      }
+    }
+    &:hover {
+      span {
+        bottom: 0;
+        .name {
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+
+  .ourInvestorsSlider {
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+      position: relative;
+      left: unset;
+      bottom: unset;
+      z-index: unset;
+      height: 6px;
+      width: 100%;
+      flex: 1;
+      margin-top: 30px;
+      background-color: #eee;
+      .swiper-scrollbar-drag {
+        background-color: #cecece;
+        cursor: pointer;
+      }
     }
   }
 }

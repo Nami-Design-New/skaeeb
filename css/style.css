@@ -323,7 +323,7 @@ button {
 
 content {
   display: flex;
-  min-height: 87.6vh;
+  min-height: calc(100vh - 80px);
   flex-direction: column;
 }
 
@@ -1318,21 +1318,21 @@ header nav .navBtn.active span:last-child {
   background-size: cover;
   background-position: center;
 }
-.projectsPage .mySwiper2 {
+.projectsPage .projectSlider2 {
   height: 80%;
   width: 100%;
 }
-.projectsPage .mySwiper {
+.projectsPage .projectSlider {
   height: 20%;
   box-sizing: border-box;
   padding: 10px 0;
 }
-.projectsPage .mySwiper .swiper-slide {
+.projectsPage .projectSlider .swiper-slide {
   width: 25%;
   height: 100%;
   opacity: 0.4;
 }
-.projectsPage .mySwiper .swiper-slide-thumb-active {
+.projectsPage .projectSlider .swiper-slide-thumb-active {
   opacity: 1;
 }
 .projectsPage .swiper-slide img {
@@ -1838,6 +1838,10 @@ header nav .navBtn.active span:last-child {
 
 .partners {
   padding: 100px 0;
+  background-color: var(--mainColor10);
+}
+.partners .title .hint::after {
+  background: var(--mainColor10);
 }
 .partners .swiper-slide {
   width: auto;
@@ -1876,7 +1880,6 @@ header nav .navBtn.active span:last-child {
 }
 
 footer {
-  margin-top: 50px;
   padding: 20px 0;
   background-color: var(--mainColor);
 }
@@ -1922,4 +1925,96 @@ footer .container .socialMedia a:hover {
 }
 footer .container .company {
   color: var(--secondColor10);
+}
+
+.clients {
+  padding: 100px 0;
+}
+.clients .top {
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.clients .top .hint {
+  color: var(--textColor);
+  width: min(100% - 40px, 600px);
+}
+.clients .sideImg {
+  width: 100%;
+  height: 100%;
+  padding: 0 32px;
+}
+.clients .sideImg .simpleParallax {
+  height: 100%;
+}
+.clients .sideImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.clients .client {
+  padding: 24px;
+  position: relative;
+  border: 1px solid var(--mainColor30);
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.clients .client img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 768px) {
+  .clients .client img {
+    height: 110px;
+  }
+}
+.clients .client span {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(21, 67, 113, 0.8078431373), #154371);
+  position: absolute;
+  right: 0;
+  bottom: -100%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--whiteColor);
+  transition: 0.3s ease-in-out;
+}
+.clients .client span .name {
+  transform: translateY(50px);
+  transition: 0.6s ease-in-out;
+  padding: 24px;
+}
+.clients .client:hover span {
+  bottom: 0;
+}
+.clients .client:hover span .name {
+  transform: translateY(0px);
+}
+.clients .ourInvestorsSlider .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.clients .ourInvestorsSlider .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  left: unset;
+  bottom: unset;
+  z-index: unset;
+  height: 6px;
+  width: 100%;
+  flex: 1;
+  margin-top: 30px;
+  background-color: #eee;
+}
+.clients .ourInvestorsSlider .swiper-scrollbar.swiper-scrollbar-horizontal .swiper-scrollbar-drag {
+  background-color: #cecece;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
