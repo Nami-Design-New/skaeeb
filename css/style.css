@@ -549,6 +549,20 @@ header nav .navMenu .navLink.active::after, header nav .navMenu .navLink:hover::
     transform: skewX(60deg);
   }
 }
+header nav .navMenu .animatedLink {
+  color: var(--whiteColor);
+  font-weight: bold;
+}
+header nav .navMenu .animatedLink i span {
+  border-color: var(--whiteColor);
+}
+header nav .navMenu .animatedLink:hover {
+  color: var(--whiteColor);
+  font-weight: bold;
+}
+header nav .navMenu .animatedLink:hover i span {
+  border-color: var(--secondColor);
+}
 @media (max-width: 992px) {
   header nav .navMenu {
     position: fixed;
@@ -641,6 +655,13 @@ header nav .navBtn.active span:last-child {
 }
 .headerAnimate nav .navMenu .navLink {
   color: var(--darkColor);
+}
+.headerAnimate nav .navMenu .animatedLink {
+  color: var(--darkColor);
+  font-weight: bold;
+}
+.headerAnimate nav .navMenu .animatedLink i span {
+  border-color: var(--darkColor);
 }
 .headerAnimate nav .navBtn span {
   background-color: var(--secondColor);

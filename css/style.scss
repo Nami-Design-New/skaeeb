@@ -531,6 +531,20 @@ header {
           }
         }
       }
+      .animatedLink {
+        color: var(--whiteColor);
+        font-weight: bold;
+        i span {
+          border-color: var(--whiteColor);
+        }
+        &:hover {
+          color: var(--whiteColor);
+          font-weight: bold;
+          i span {
+            border-color: var(--secondColor);
+          }
+        }
+      }
       @media (max-width: 992px) {
         position: fixed;
         z-index: -1;
@@ -624,6 +638,13 @@ header {
       }
       .navLink {
         color: var(--darkColor);
+      }
+      .animatedLink {
+        color: var(--darkColor);
+        font-weight: bold;
+        i span {
+          border-color: var(--darkColor);
+        }
       }
     }
     .navBtn {
@@ -1913,14 +1934,14 @@ footer {
       width: min(100% - 40px, 600px);
     }
   }
-  .sideImg{
+  .sideImg {
     width: 100%;
     height: 100%;
     padding: 0 32px;
-    .simpleParallax{
+    .simpleParallax {
       height: 100%;
     }
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
