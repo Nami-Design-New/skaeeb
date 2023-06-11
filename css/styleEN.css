@@ -26,7 +26,7 @@
   margin: 0;
   padding: 0;
   outline: none;
-  direction: rtl;
+  direction: ltr;
   scroll-behavior: smooth;
 }
 
@@ -152,7 +152,7 @@ input {
 [type=number],
 [type=tel],
 [type=url] {
-  direction: rtl;
+  direction: ltr;
 }
 
 .select2-container--default .select2-selection--single {
@@ -170,8 +170,8 @@ input {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-  left: 1px;
-  right: unset;
+  right: 1px;
+  left: unset;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -221,7 +221,7 @@ span.select2.select2-container.select2-container--default {
   align-items: center;
   gap: 4px;
   position: relative;
-  padding-left: 24px;
+  padding-right: 24px;
 }
 .dropdown .dropdown-toggle::after {
   content: "\f107";
@@ -230,7 +230,7 @@ span.select2.select2-container.select2-container--default {
   vertical-align: middle;
   font-size: 12px;
   position: absolute;
-  left: 8px;
+  right: 8px;
   top: 55%;
   transform: translateY(-50%);
   color: var(--grayColor);
@@ -265,8 +265,8 @@ span.select2.select2-container.select2-container--default {
 .dropdown .dropdown-menu.show {
   top: calc(100% + 10px) !important;
   display: flex;
-  right: unset;
-  left: 0;
+  left: unset;
+  right: 0;
 }
 .dropdown .dropdown-menu::before {
   content: "";
@@ -275,7 +275,7 @@ span.select2.select2-container.select2-container--default {
   background-color: var(--whiteColor);
   position: absolute;
   top: -8px;
-  left: 24px;
+  right: 24px;
   transform: rotate(45deg);
   border-radius: 2px;
   z-index: -2;
@@ -289,7 +289,7 @@ span.select2.select2-container.select2-container--default {
   position: absolute;
   top: 0;
   z-index: -1;
-  left: 2px;
+  right: 2px;
   border-radius: 4px;
 }
 @keyframes fadeIn {
@@ -335,7 +335,7 @@ content {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -344,8 +344,8 @@ content {
   transform: translateX(0%);
 }
 .lazyDiv.oppositeDir::after {
-  left: unset;
-  right: 0;
+  right: unset;
+  left: 0;
 }
 .lazyDiv .lazy {
   position: relative;
@@ -353,10 +353,10 @@ content {
   width: 100%;
 }
 .lazyDiv.loaded::after {
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 .lazyDiv.loaded.oppositeDir::after {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 .lazyDiv.loaded.down::after {
   transform: translateY(100%);
@@ -369,7 +369,7 @@ content {
   background-color: var(--secondColor);
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 1111;
   width: 100%;
   height: 100%;
@@ -394,7 +394,7 @@ content {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
+  right: 50%;
   width: 90px;
   height: 90px;
   z-index: 2;
@@ -434,7 +434,7 @@ content {
 }
 .animatedLink i span {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 50%;
   z-index: -1;
   transform: translateY(-50%);
@@ -470,7 +470,7 @@ content {
 header {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1024;
   padding: 8px;
@@ -495,8 +495,8 @@ header nav .logo img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: right;
-     object-position: right;
+  -o-object-position: left;
+     object-position: left;
   filter: brightness(0) invert(1);
 }
 @media (max-width: 576px) {
@@ -532,7 +532,7 @@ header nav .navMenu .navLink::after {
   background-color: gold;
   position: absolute;
   bottom: 25%;
-  right: 25%;
+  left: 25%;
   z-index: -1;
   transition: var(--transition);
   transform: skewX(0deg);
@@ -567,7 +567,7 @@ header nav .navMenu .animatedLink:hover i span {
   header nav .navMenu {
     position: fixed;
     z-index: -1;
-    left: -100%;
+    right: -100%;
     bottom: 0px;
     width: 100%;
     height: 100vh;
@@ -584,7 +584,7 @@ header nav .navMenu .animatedLink:hover i span {
   }
 }
 header nav .navMenu.active {
-  left: 0;
+  right: 0;
 }
 header nav .navBtn {
   margin: auto 0;
@@ -598,7 +598,7 @@ header nav .navBtn {
 }
 header nav .navBtn span {
   position: absolute;
-  left: 0;
+  right: 0;
   display: block;
   width: 24px;
   height: 2px;
@@ -695,7 +695,7 @@ header nav .navBtn.active span:last-child {
   height: 100vh;
   min-height: 500px;
   isolation: isolate;
-  padding-right: 10vw;
+  padding-left: 10vw;
 }
 .mainSlider .mainSliderContainer .swiper-slide::after {
   content: "";
@@ -704,7 +704,7 @@ header nav .navBtn.active span:last-child {
   background: rgba(103, 14, 54, 0.4549019608);
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
@@ -752,7 +752,7 @@ header nav .navBtn.active span:last-child {
 .mainSlider .swiperControl {
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  right: 10px;
   padding: 20px;
   display: flex;
   gap: 24px;
@@ -765,8 +765,8 @@ header nav .navBtn.active span:last-child {
 .mainSlider .swiperControl .swiperBtns .swiper-button-next,
 .mainSlider .swiperControl .swiperBtns .swiper-button-prev {
   position: relative;
-  right: unset;
   left: unset;
+  right: unset;
   top: unset;
   bottom: unset;
   margin: unset;
@@ -801,7 +801,7 @@ header nav .navBtn.active span:last-child {
   color: var(--secondColor);
 }
 .mainSlider .swiperControl .swiperBtns .swiper-button-next {
-  right: unset;
+  left: unset;
 }
 .mainSlider .swiperControl .swiperBtns .swiper-button-next::after {
   content: "\f105" !important;
@@ -812,8 +812,8 @@ header nav .navBtn.active span:last-child {
 }
 .mainSlider .swiperControl .swiper-pagination {
   position: relative;
-  right: unset;
   left: unset;
+  right: unset;
   top: unset;
   bottom: unset;
   margin: unset;
@@ -875,7 +875,7 @@ header nav .navBtn.active span:last-child {
 .title .hint::before {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   top: 50%;
   width: 100%;
   height: 2px;
@@ -887,12 +887,12 @@ header nav .navBtn.active span:last-child {
 .title .hint::after {
   content: "";
   position: absolute;
-  right: 50%;
+  left: 50%;
   top: 50%;
   width: calc(100% - 60px);
   height: 100%;
   background-color: white;
-  transform: translate(50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: -1;
 }
 .title h1 {
@@ -909,7 +909,7 @@ header nav .navBtn.active span:last-child {
 .aboutUS .aboutImg::before {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   top: 50%;
   border: 10px solid gold;
   width: 100%;
@@ -969,7 +969,7 @@ header nav .navBtn.active span:last-child {
 .projects .business .image::after {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   width: 100%;
   height: 100%;
@@ -991,7 +991,7 @@ header nav .navBtn.active span:last-child {
 .projects .business .image span {
   opacity: 0;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   width: 100%;
   height: 100%;
@@ -1135,7 +1135,7 @@ header nav .navBtn.active span:last-child {
 .aboutPage .lazyImg::before {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   top: 50%;
   border: 10px solid gold;
   width: 100%;
@@ -1332,8 +1332,8 @@ header nav .navBtn.active span:last-child {
 .projectsPage .swiper {
   width: 100%;
   height: 300px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 .projectsPage .swiper-slide {
   background-size: cover;
@@ -1367,7 +1367,7 @@ header nav .navBtn.active span:last-child {
 .projectsPage .swiperControl {
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  right: 10px;
   padding: 20px;
   display: flex;
   gap: 24px;
@@ -1379,10 +1379,9 @@ header nav .navBtn.active span:last-child {
 }
 .projectsPage .swiperControl .swiperBtns .swiper-button-next,
 .projectsPage .swiperControl .swiperBtns .swiper-button-prev {
-  transform: scaleX(-1);
   position: relative;
-  right: unset;
   left: unset;
+  right: unset;
   top: unset;
   bottom: unset;
   margin: unset;
@@ -1417,7 +1416,7 @@ header nav .navBtn.active span:last-child {
   color: var(--secondColor);
 }
 .projectsPage .swiperControl .swiperBtns .swiper-button-next {
-  right: unset;
+  left: unset;
 }
 .projectsPage .swiperControl .swiperBtns .swiper-button-next::after {
   content: "\f105" !important;
@@ -1428,8 +1427,8 @@ header nav .navBtn.active span:last-child {
 }
 .projectsPage .swiperControl .swiper-pagination {
   position: relative;
-  right: unset;
   left: unset;
+  right: unset;
   top: unset;
   bottom: unset;
   margin: unset;
@@ -1482,7 +1481,7 @@ header nav .navBtn.active span:last-child {
 .equipments .images span {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1583,8 +1582,8 @@ header nav .navBtn.active span:last-child {
   width: 90%;
   height: 100%;
   top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   border-radius: 12px;
   background-color: var(--mainColor30);
   z-index: -1;
@@ -1595,8 +1594,8 @@ header nav .navBtn.active span:last-child {
   width: 80%;
   height: 100%;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   border-radius: 12px;
   background-color: var(--mainColor10);
   z-index: -2;
@@ -1622,8 +1621,8 @@ header nav .navBtn.active span:last-child {
   width: 0%;
   height: 0%;
   top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  right: 50%;
+  transform: translateX(50%) translateY(-50%);
   border-radius: 100px;
   background-color: var(--mainColor);
   z-index: -1;
@@ -1728,7 +1727,7 @@ header nav .navBtn.active span:last-child {
 .contactUs .contactForm .worldMap .earth {
   position: absolute;
   top: 50%;
-  left: 50%;
+  right: 50%;
   width: 80%;
   height: 80%;
   margin: -40%;
@@ -1742,7 +1741,7 @@ header nav .navBtn.active span:last-child {
 .contactUs .contactForm .worldMap .orbic {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
 }
@@ -1827,7 +1826,7 @@ header nav .navBtn.active span:last-child {
   }
   .contactUs .contactForm .worldMap .earth {
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -2000,7 +1999,7 @@ footer .container .company {
   height: 100%;
   background: linear-gradient(rgba(21, 67, 113, 0.8078431373), #154371);
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: -100%;
   border-radius: 8px;
   display: flex;
@@ -2027,7 +2026,7 @@ footer .container .company {
 }
 .clients .ourInvestorsSlider .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: relative;
-  right: unset;
+  left: unset;
   bottom: unset;
   z-index: unset;
   height: 6px;
@@ -2039,8 +2038,4 @@ footer .container .company {
 .clients .ourInvestorsSlider .swiper-scrollbar.swiper-scrollbar-horizontal .swiper-scrollbar-drag {
   background-color: #cecece;
   cursor: pointer;
-}
-
-.fa-arrow-right-long {
-  transform: scaleX(-1);
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=styleEN.css.map */

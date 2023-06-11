@@ -24,7 +24,7 @@
   margin: 0;
   padding: 0;
   outline: none;
-  direction: rtl;
+  direction: ltr;
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
@@ -125,7 +125,7 @@ input {
 [type="number"],
 [type="tel"],
 [type="url"] {
-  direction: rtl;
+  direction: ltr;
 }
 .select2-container--default .select2-selection--single {
   display: flex;
@@ -142,8 +142,8 @@ input {
 .select2-container--default
   .select2-selection--single
   .select2-selection__arrow {
-  left: 1px;
-  right: unset;
+  right: 1px;
+  left: unset;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -190,7 +190,7 @@ span.select2.select2-container.select2-container--default {
     align-items: center;
     gap: 4px;
     position: relative;
-    padding-left: 24px;
+    padding-right: 24px;
     &::after {
       content: "\f107";
       font-family: "Font Awesome 6 Pro";
@@ -198,7 +198,7 @@ span.select2.select2-container.select2-container--default {
       vertical-align: middle;
       font-size: 12px;
       position: absolute;
-      left: 8px;
+      right: 8px;
       top: 55%;
       transform: translateY(-50%);
       color: var(--grayColor);
@@ -235,8 +235,8 @@ span.select2.select2-container.select2-container--default {
     &.show {
       top: calc(100% + 10px) !important;
       display: flex;
-      right: unset;
-      left: 0;
+      left: unset;
+      right: 0;
     }
     &::before {
       content: "";
@@ -245,7 +245,7 @@ span.select2.select2-container.select2-container--default {
       background-color: var(--whiteColor);
       position: absolute;
       top: -8px;
-      left: 24px;
+      right: 24px;
       transform: rotate(45deg);
       border-radius: 2px;
       z-index: -2;
@@ -259,7 +259,7 @@ span.select2.select2-container.select2-container--default {
       position: absolute;
       top: 0;
       z-index: -1;
-      left: 2px;
+      right: 2px;
       border-radius: 4px;
     }
   }
@@ -312,7 +312,7 @@ content {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -322,8 +322,8 @@ content {
   }
   &.oppositeDir {
     &::after {
-      left: unset;
-      right: 0;
+      right: unset;
+      left: 0;
     }
   }
   .lazy {
@@ -333,11 +333,11 @@ content {
   }
   &.loaded {
     &::after {
-      transform: translateX(-100%);
+      transform: translateX(100%);
     }
     &.oppositeDir {
       &::after {
-        transform: translateX(100%);
+        transform: translateX(-100%);
       }
     }
     &.down {
@@ -356,7 +356,7 @@ content {
   background-color: var(--secondColor);
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 1111;
   width: 100%;
   height: 100%;
@@ -375,7 +375,7 @@ content {
       content: "";
       position: absolute;
       top: 50%;
-      left: 50%;
+      right: 50%;
       width: 90px;
       height: 90px;
       z-index: 2;
@@ -413,7 +413,7 @@ content {
     transition: width 0.3s ease-in-out;
     span {
       position: absolute;
-      left: 0;
+      right: 0;
       top: 50%;
       z-index: -1;
       transform: translateY(-50%);
@@ -456,7 +456,7 @@ content {
 header {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1024;
   padding: 8px;
@@ -477,7 +477,7 @@ header {
         transition: var(--transition);
         width: 100%;
         object-fit: contain;
-        object-position: right;
+        object-position: left;
         filter: brightness(0) invert(1);
         @media (max-width: 576px) {
           height: 50px;
@@ -510,7 +510,7 @@ header {
           background-color: gold;
           position: absolute;
           bottom: 25%;
-          right: 25%;
+          left: 25%;
           z-index: -1;
           transition: var(--transition);
           transform: skewX(0deg);
@@ -548,7 +548,7 @@ header {
       @media (max-width: 992px) {
         position: fixed;
         z-index: -1;
-        left: -100%;
+        right: -100%;
         bottom: 0px;
         width: 100%;
         height: 100vh;
@@ -564,7 +564,7 @@ header {
         }
       }
       &.active {
-        left: 0;
+        right: 0;
       }
     }
     .navBtn {
@@ -578,7 +578,7 @@ header {
       z-index: 2;
       span {
         position: absolute;
-        left: 0;
+        right: 0;
         display: block;
         width: 24px;
         height: 2px;
@@ -680,7 +680,7 @@ header {
       height: 100vh;
       min-height: 500px;
       isolation: isolate;
-      padding-right: 10vw;
+      padding-left: 10vw;
       &::after {
         content: "";
         width: 100%;
@@ -688,7 +688,7 @@ header {
         background: #670e3674;
         position: absolute;
         bottom: 0;
-        right: 0;
+        left: 0;
         z-index: -1;
         transition: 0.3s ease-in-out;
       }
@@ -738,7 +738,7 @@ header {
   .swiperControl {
     position: absolute;
     bottom: 10px;
-    left: 10px;
+    right: 10px;
     padding: 20px;
     display: flex;
     gap: 24px;
@@ -749,8 +749,8 @@ header {
       .swiper-button-next,
       .swiper-button-prev {
         position: relative;
-        right: unset;
         left: unset;
+        right: unset;
         top: unset;
         bottom: unset;
         margin: unset;
@@ -780,7 +780,7 @@ header {
         }
       }
       .swiper-button-next {
-        right: unset;
+        left: unset;
         &::after {
           content: "\f105" !important;
         }
@@ -794,8 +794,8 @@ header {
     }
     .swiper-pagination {
       position: relative;
-      right: unset;
       left: unset;
+      right: unset;
       top: unset;
       bottom: unset;
       margin: unset;
@@ -854,7 +854,7 @@ header {
     &::before {
       content: "";
       position: absolute;
-      right: 0;
+      left: 0;
       top: 50%;
       width: 100%;
       height: 2px;
@@ -866,12 +866,12 @@ header {
     &::after {
       content: "";
       position: absolute;
-      right: 50%;
+      left: 50%;
       top: 50%;
       width: calc(100% - 60px);
       height: 100%;
       background-color: white;
-      transform: translate(50%, -50%);
+      transform: translate(-50%, -50%);
       z-index: -1;
     }
   }
@@ -887,7 +887,7 @@ header {
     &::before {
       content: "";
       position: absolute;
-      right: 0;
+      left: 0;
       top: 50%;
       border: 10px solid gold;
       width: 100%;
@@ -944,7 +944,7 @@ header {
       &::after {
         content: "";
         position: absolute;
-        right: 0;
+        left: 0;
         top: 0;
         width: 100%;
         height: 100%;
@@ -965,7 +965,7 @@ header {
       span {
         opacity: 0;
         position: absolute;
-        right: 0;
+        left: 0;
         top: 0;
         width: 100%;
         height: 100%;
@@ -1112,7 +1112,7 @@ header {
     &::before {
       content: "";
       position: absolute;
-      right: 0;
+      left: 0;
       top: 50%;
       border: 10px solid gold;
       width: 100%;
@@ -1303,8 +1303,8 @@ header {
   .swiper {
     width: 100%;
     height: 300px;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
   }
 
   .swiper-slide {
@@ -1343,7 +1343,7 @@ header {
   .swiperControl {
     position: absolute;
     bottom: 10px;
-    left: 10px;
+    right: 10px;
     padding: 20px;
     display: flex;
     gap: 24px;
@@ -1353,10 +1353,9 @@ header {
       gap: 8px;
       .swiper-button-next,
       .swiper-button-prev {
-        transform: scaleX(-1);
         position: relative;
-        right: unset;
         left: unset;
+        right: unset;
         top: unset;
         bottom: unset;
         margin: unset;
@@ -1386,7 +1385,7 @@ header {
         }
       }
       .swiper-button-next {
-        right: unset;
+        left: unset;
         &::after {
           content: "\f105" !important;
         }
@@ -1400,8 +1399,8 @@ header {
     }
     .swiper-pagination {
       position: relative;
-      right: unset;
       left: unset;
+      right: unset;
       top: unset;
       bottom: unset;
       margin: unset;
@@ -1454,7 +1453,7 @@ header {
     span {
       position: absolute;
       top: 0;
-      right: 0;
+      left: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1551,8 +1550,8 @@ header {
         width: 90%;
         height: 100%;
         top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 50%;
+        transform: translateX(50%);
         border-radius: 12px;
         background-color: var(--mainColor30);
         z-index: -1;
@@ -1563,8 +1562,8 @@ header {
         width: 80%;
         height: 100%;
         top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 50%;
+        transform: translateX(50%);
         border-radius: 12px;
         background-color: var(--mainColor10);
         z-index: -2;
@@ -1591,8 +1590,8 @@ header {
           width: 0%;
           height: 0%;
           top: 50%;
-          left: 50%;
-          transform: translateX(-50%) translateY(-50%);
+          right: 50%;
+          transform: translateX(50%) translateY(-50%);
           border-radius: 100px;
           background-color: var(--mainColor);
           z-index: -1;
@@ -1702,7 +1701,7 @@ header {
       .earth {
         position: absolute;
         top: 50%;
-        left: 50%;
+        right: 50%;
         width: 80%;
         height: 80%;
         margin: -40%;
@@ -1716,7 +1715,7 @@ header {
       .orbic {
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         width: 100%;
         height: 100%;
       }
@@ -1798,7 +1797,7 @@ header {
         position: relative;
         .earth {
           top: 0;
-          left: 0;
+          right: 0;
           width: 100%;
           height: 100%;
           margin: 0;
@@ -1968,7 +1967,7 @@ footer {
       height: 100%;
       background: linear-gradient(#154371ce, #154371);
       position: absolute;
-      left: 0;
+      right: 0;
       bottom: -100%;
       border-radius: 8px;
       display: flex;
@@ -2000,7 +1999,7 @@ footer {
     }
     .swiper-scrollbar.swiper-scrollbar-horizontal {
       position: relative;
-      right: unset;
+      left: unset;
       bottom: unset;
       z-index: unset;
       height: 6px;
@@ -2014,7 +2013,4 @@ footer {
       }
     }
   }
-}
-.fa-arrow-right-long{
-  transform: scaleX(-1);
 }
