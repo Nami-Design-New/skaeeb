@@ -2014,3 +2014,23 @@ footer {
     }
   }
 }
+
+.privacy {
+  padding: 48px 24px 64px;
+  .container{
+    width: min(100% - 24px , 1000px);
+  }
+  h1,
+  h3,
+  h4,
+  h5,
+  h6,
+  h2 {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 24px 0 12px;
+  }
+  p {
+    color: var(--grayColor);
+  }
+}

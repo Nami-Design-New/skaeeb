@@ -2043,4 +2043,24 @@ footer .container .company {
 
 .fa-arrow-right-long {
   transform: scaleX(-1);
+}
+
+.privacy {
+  padding: 48px 24px 64px;
+}
+.privacy .container {
+  width: min(100% - 24px, 1000px);
+}
+.privacy h1,
+.privacy h3,
+.privacy h4,
+.privacy h5,
+.privacy h6,
+.privacy h2 {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 24px 0 12px;
+}
+.privacy p {
+  color: var(--grayColor);
 }/*# sourceMappingURL=style.css.map */
